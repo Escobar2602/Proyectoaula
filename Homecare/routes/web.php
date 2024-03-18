@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Agendarcita;
+use App\Http\Controllers\Consultarcita;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,3 +28,9 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::get('/agendarCita', [Agendarcita::class, 'index'])->name('agendarCita');
+
+Route::get('/consultarCita', [Consultarcita::class, 'index'])->name('consultarCita');
+
+

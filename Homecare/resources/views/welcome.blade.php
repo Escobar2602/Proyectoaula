@@ -36,16 +36,17 @@
             width: 300px;
             opacity: 1;
             filter: contrast(120%);
-        }
-
-h1 {
-    color: #020202;
-    font-weight: normal;
-    font-size: 25px;
-    font-family: Arial;
-    text-transform: lowercase;
 
         }
+
+        h1 {
+            color: #020202;
+            font-weight: normal;
+            font-size: 25px;
+            font-family: Arial;
+            text-transform: lowercase;
+
+                }
 
 
         .sr-only {
@@ -60,35 +61,39 @@ h1 {
             border-width: 0;
         }
 
-    * {
-        margin:0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: sans-serif;
+        * {
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            }
+
+        body {
+            align-items: center;
+            min-height: 100vh;
+
         }
 
-    body {
-        align-items: center;
-        min-height: 100vh;
 
-    }
+        .text-box{
+            color:black;
+        }
 
+        .text-box h1 {
+            font-size: 42px;
+        }
 
-    .text-box{
-        color:black;
-    }
+        iframe {
+        float: left;
+        border: 3px solid #fff;
+        border-radius: 10px;
+        border-radius: 10px;
+        margin-right: 15PX;
+        }
 
-    .text-box h1 {
-        font-size: 42px;
-    }
-
-    iframe {
-    float: left;
-    border: 3px solid #fff;
-    border-radius: 10px;
-    border-radius: 10px;
-    margin-right: 15PX;
-    }
+        header {
+            
+        }
 
 
     </style>
@@ -99,13 +104,13 @@ h1 {
 
 
         @if (Route::has('login'))
-        <header class="text-gray-400 bg-gray-900 body-font ">
+        <header class=" text-gray-400 bg-gray-900 body-font ">
             <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
             <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-blue-500 rounded-full" viewBox="0 0 24 24">
                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
                 </svg>
-                <span class="ml-3 text-xl">Tailblocks</span>
+                <span class="ml-3 text-xl">HOMECARE</span>
             </a>
             <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
                     {{--<li>
@@ -249,13 +254,12 @@ h1 {
     </body>
 </html>
 
-<script>
-  import {
-  Carousel,
-  initTWE,
-} from "tw-elements";
-
-initTWE({ Carousel });
+<script type="text/javascript">
+    window.addEventListener("scroll", function()){
+        var header = document.querySelector("header");
+        header.classList.toggle("abajo",window.scrollY>)
+    }
 </script>
+
 
 
